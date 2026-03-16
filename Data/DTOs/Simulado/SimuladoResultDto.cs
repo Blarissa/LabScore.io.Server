@@ -8,6 +8,6 @@ namespace LabScore.io.Server.Data.DTOs.Simulado
         public Guid Id { get; set; }
         public DateTime DataRealizacao { get; set; }
         public double PontuacaoFinal { get; set; }
-        public List<RespostaUsuarioReadDto> RespostasEnviadas { get; set; }
+        public required List<RespostaUsuarioReadDto> RespostasEnviadas { get; set; }
     }
 }

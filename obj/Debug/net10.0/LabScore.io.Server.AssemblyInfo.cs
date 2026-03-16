@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LabScore.io.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8089a02c7e1d48285f61c3e85c65245cbea23ea4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1f43fda05f4ea99fbc0a5f2151450e1e67ee9b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("LabScore.io.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LabScore.io.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

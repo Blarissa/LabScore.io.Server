@@ -11,7 +11,8 @@ using System.Reflection;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+    ?? throw new InvalidOperationException("Connection string 'DefaultConnection' não encontrada.");
 
 connectionString = connectionString
     .Replace("{DB_USER}", Environment.GetEnvironmentVariable("DB_USER_POSTGRES") ?? throw new InvalidOperationException("Variável de ambiente DB_USER_POSTGRES não definida."))

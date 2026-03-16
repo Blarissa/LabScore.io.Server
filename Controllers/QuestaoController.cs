@@ -98,7 +98,7 @@ namespace LabScore.io.Server.Controllers
         /// </returns>
         [HttpPost("create-bulk")]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(List<QuestaoReadDto>))]
-        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)] 
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> CreateBulk([FromBody] List<QuestaoCreateDto> questoesDto)
         {
             var bulkValidation = await _bulkValidator.ValidateAsync(questoesDto);
@@ -137,23 +137,23 @@ namespace LabScore.io.Server.Controllers
         public async Task<IActionResult> CriarConjunto([FromBody] SimuladoConjuntoCreateDto dto)
         {
             if (dto?.QuestoesIds == null || dto.QuestoesIds.Count == 0)
-                return BadRequest(new { mensagem = "Informe ao menos um ID de questão." });
+                if (dto?.QuestoesIds == null || dto.QuestoesIds.Count == 0)
+                    return BadRequest(new { mensagem = "Informe ao menos um ID de questão." });
 
             var ids = dto.QuestoesIds.Distinct().ToList();
-            var questoes = new List<Questao>();
 
-            foreach (var id in ids)
-            {
-                var questao = await _service.RecuperarPorIdAsync(id);
-                questoes.Add(questao);
-            }
+            var questoes = (await Task.WhenAll(ids.Select(id => _service.RecuperarPorIdAsync(id))))
+                .Where(q => q is not null)
+                .ToList();
+
+            if (questoes.Count == 0)
+                return NotFound(new { mensagem = "Nenhuma questão encontrada para os IDs informados." });
 
             var retorno = new SimuladoConjuntoReadDto
             {
                 TotalQuestoes = questoes.Count,
                 Questoes = _mapper.Map<List<QuestaoReadDto>>(questoes)
             };
-
             return Ok(retorno);
         }
     }

@@ -2,14 +2,15 @@
 {
     public class QuestaoCreateDto
     {
-        public string Enunciado { get; set; }
-        public string Disciplina { get; set; }
-        public List<AlternativaCreateDto> Alternativas { get; set; }
-        public int AlternativaCorretaId { get; set; }
+        public required string Enunciado { get; set; }
+        public required string Disciplina { get; set; }
+        public required List<AlternativaCreateDto> Alternativas { get; set; }
+        public required int AlternativaCorretaId { get; set; }
+        
     }
 
     public class AlternativaCreateDto
     {
-        public string Texto { get; set; }
+        public required string Texto { get; set; }
     }
 }
