@@ -3039,11 +3039,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\laris\\source\\repos\\LabScore.io\\LabScore.io.Server\\LabScore.io.Server.csproj",
+      "projectUniqueName": "C:\\Users\\laris\\source\\repos\\LabScore.io.Server\\LabScore.io.Server.csproj",
       "projectName": "LabScore.io.Server",
-      "projectPath": "C:\\Users\\laris\\source\\repos\\LabScore.io\\LabScore.io.Server\\LabScore.io.Server.csproj",
+      "projectPath": "C:\\Users\\laris\\source\\repos\\LabScore.io.Server\\LabScore.io.Server.csproj",
       "packagesPath": "C:\\Users\\laris\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\laris\\source\\repos\\LabScore.io\\LabScore.io.Server\\obj\\",
+      "outputPath": "C:\\Users\\laris\\source\\repos\\LabScore.io.Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3062,7 +3062,6 @@
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {}
         }
@@ -3081,7 +3080,6 @@
     },
     "frameworks": {
       "net10.0": {
-        "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
           "AutoMapper": {

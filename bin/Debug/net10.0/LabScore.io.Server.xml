@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LabScore.io.Server</name>
+    </assembly>
+    <members>
+        <member name="T:LabScore.io.Server.Controllers.QuestaoController">
+            <summary>
+            Endpoints para gerenciamento de questões.
+            </summary>
+        </member>
+        <member name="M:LabScore.io.Server.Controllers.QuestaoController.#ctor(LabScore.io.Server.Service.IQuestaoService,AutoMapper.IMapper,FluentValidation.IValidator{LabScore.io.Server.Model.Questao},FluentValidation.IValidator{System.Collections.Generic.List{LabScore.io.Server.Data.DTOs.Questao.QuestaoCreateDto}})">
+            <summary>
+            Inicializa o controller de questões.
+            </summary>
+        </member>
+        <member name="M:LabScore.io.Server.Controllers.QuestaoController.All">
+            <summary>
+            Lista todas as questões disponíveis no banco
+            </summary>
+            <response code="200">Retorna a lista de questões com alternativas</response>
+        </member>
+        <member name="M:LabScore.io.Server.Controllers.QuestaoController.Details(System.Guid)">
+            <summary>
+            Obtém os detalhes de uma questão específica por UUID
+            </summary>
+            <param name="id">Identificador único da questão</param>
+        </member>
+        <member name="M:LabScore.io.Server.Controllers.QuestaoController.Create(LabScore.io.Server.Data.DTOs.Questao.QuestaoCreateDto)">
+            <summary>
+            Cadastra uma nova questão no laboratório
+            </summary>
+            <remarks>
+            Ao cadastrar, envie a lista de alternativas e o ID da que for correta.
+            </remarks>
+        </member>
+        <member name="M:LabScore.io.Server.Controllers.QuestaoController.CreateBulk(System.Collections.Generic.List{LabScore.io.Server.Data.DTOs.Questao.QuestaoCreateDto})">
+            <summary>
+            Cadastra várias questões no laboratório
+            </summary>
+            <param name="questoesDto"></param>
+            <returns>
+            Retorna a lista de questões cadastradas
+            </returns>
+        </member>
+        <member name="M:LabScore.io.Server.Controllers.QuestaoController.CriarConjunto(LabScore.io.Server.Data.DTOs.Simulado.SimuladoConjuntoCreateDto)">
+            <summary>
+            Monta um conjunto de questões para aplicação de simulado.
+            </summary>
+            <remarks>
+            Recebe uma lista de IDs de questões e retorna o pacote pronto para exibição ao participante.
+            </remarks>
+            <response code="200">Conjunto montado com sucesso</response>
+            <response code="400">Lista de questões inválida</response>
+            <response code="404">Uma ou mais questões não encontradas</response>
+        </member>
+        <member name="M:LabScore.io.Server.Controllers.SimuladoController.Create(LabScore.io.Server.Data.DTOs.Simulado.SimuladoCreateDto)">
+            <summary>
+            Processa um simulado e retorna a nota final
+            </summary>
+            <remarks>
+            Recebe a lista de questões respondidas, calcula a pontuação com base no gabarito e salva o resultado.
+            </remarks>
+            <param name="simuladoDto">Dados das respostas do usuário</param>
+            <response code="201">Simulado processado e nota gerada com sucesso</response>
+            <response code="400">Dados inválidos ou simulado vazio</response>
+            <response code="500">Erro interno do servidor</response>
+        </member>
+        <member name="M:LabScore.io.Server.Controllers.SimuladoController.Details(System.Guid)">
+            <summary>
+            Obtém os detalhes de um simulado realizado
+            </summary>
+            <param name="id">Identificador único (UUID) do simulado</param>
+            <response code="200">Detalhes do simulado encontrados</response>
+            <response code="404">Simulado não encontrado</response>
+        </member>
+        <member name="M:LabScore.io.Server.Controllers.SimuladoController.All">
+            <summary>
+            Lista o histórico de simulados (sem necessidade de login por enquanto)
+            </summary>
+        </member>
+        <member name="M:LabScore.io.Server.Controllers.SimuladoController.Responder(LabScore.io.Server.Data.DTOs.Simulado.SimuladoCreateDto)">
+            <summary>
+            Responde um simulado e retorna o resultado final.
+            </summary>
+        </member>
+        <member name="T:LabScore.io.Server.Validacao.QuestaoCreateBulkValidator">
+            <summary>
+            Valida o payload de cadastro em lote de questões.
+            </summary>
+        </member>
+        <member name="M:LabScore.io.Server.Validacao.QuestaoCreateBulkValidator.#ctor">
+            <summary>
+            Define as regras para o lote de questões.
+            </summary>
+        </member>
+        <member name="T:Program">
+            <summary>
+            Auto-generated public partial Program class for top-level statement apps.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type)">
+            <summary>
+            Generates a documentation comment ID for a type.
+            Example: T:Namespace.Outer+Inner`1 becomes T:Namespace.Outer.Inner`1
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Reflection.PropertyInfo)">
+            <summary>
+            Generates a documentation comment ID for a property.
+            Example: P:Namespace.ContainingType.PropertyName or for an indexer P:Namespace.ContainingType.Item(System.Int32)
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type,System.String)">
+            <summary>
+            Generates a documentation comment ID for a property given its container type and property name.
+            Example: P:Namespace.ContainingType.PropertyName
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Reflection.MethodInfo)">
+            <summary>
+            Generates a documentation comment ID for a method (or constructor).
+            For example:
+              M:Namespace.ContainingType.MethodName(ParamType1,ParamType2)~ReturnType
+              M:Namespace.ContainingType.#ctor(ParamType)
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.GetTypeDocId(System.Type,System.Boolean,System.Boolean)">
+            <summary>
+            Generates a documentation ID string for a type.
+            This method handles nested types (replacing '+' with '.'),
+            generic types, arrays, pointers, by-ref types, and generic parameters.
+            The <paramref name="includeGenericArguments"/> flag controls whether
+            constructed generic type arguments are emitted, while <paramref name="omitGenericArity"/>
+            controls whether the generic arity marker (e.g. "`1") is appended.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.NormalizeDocId(System.String)">
+            <summary>
+            Normalizes a documentation comment ID to match the compiler-style format.
+            Strips the return type suffix for ordinary methods but retains it for conversion operators.
+            </summary>
+            <param name="docId">The documentation comment ID to normalize.</param>
+            <returns>The normalized documentation comment ID.</returns>
+        </member>
+    </members>
+</doc>

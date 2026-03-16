@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabScore.io.Server", "LabScore.io.Server.csproj", "{8790B203-6703-B9FF-CD0E-E3E618AAB553}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8790B203-6703-B9FF-CD0E-E3E618AAB553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8790B203-6703-B9FF-CD0E-E3E618AAB553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8790B203-6703-B9FF-CD0E-E3E618AAB553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8790B203-6703-B9FF-CD0E-E3E618AAB553}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79A6D7BD-3F65-4713-8EF5-0817515F1ACA}
+	EndGlobalSection
+EndGlobal
