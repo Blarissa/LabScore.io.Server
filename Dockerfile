@@ -6,7 +6,7 @@ COPY ["LabScore.io.Server.csproj", "./"]
 RUN dotnet restore "./LabScore.io.Server.csproj"
 
 COPY . .
-RUN dotnet publish "./LabScore.io.Server.csproj" -c Release -o /app/publish --no-restore /p:UseAppHost=false
+RUN dotnet publish "./LabScore.io.Server.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 # Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:10.0
