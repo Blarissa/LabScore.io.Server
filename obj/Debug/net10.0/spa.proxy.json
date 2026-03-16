@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:5241",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Users\\laris\\source\\repos\\LabScore.io\\LabScore.io.Server\\..\\labscore.io.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

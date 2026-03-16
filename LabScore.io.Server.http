@@ -1,0 +1,39 @@
+@LabScoreIoServer_HostAddress = http://localhost:5241
+@RespostaId = 00000000-0000-0000-0000-000000000001
+@QuestaoId = 00000000-0000-0000-0000-000000000010
+@AlternativaId = 00000000-0000-0000-0000-000000000020
+
+### Listar respostas
+GET {{LabScoreIoServer_HostAddress}}/api/RespostaUsuario
+Accept: application/json
+
+### Buscar resposta por id
+GET {{LabScoreIoServer_HostAddress}}/api/RespostaUsuario/{{RespostaId}}
+Accept: application/json
+
+### Criar resposta
+POST {{LabScoreIoServer_HostAddress}}/api/RespostaUsuario
+Content-Type: application/json
+Accept: application/json
+
+{
+  "questaoId": "{{QuestaoId}}",
+  "alternativaEscolhidaId": "{{AlternativaId}}"
+}
+
+### Atualizar resposta
+PUT {{LabScoreIoServer_HostAddress}}/api/RespostaUsuario/{{RespostaId}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "{{RespostaId}}",
+  "questaoId": "{{QuestaoId}}",
+  "alternativaEscolhidaId": "{{AlternativaId}}"
+}
+
+### Excluir resposta
+DELETE {{LabScoreIoServer_HostAddress}}/api/RespostaUsuario/{{RespostaId}}
+Accept: application/json
+
+###
