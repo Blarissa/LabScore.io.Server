@@ -137,14 +137,19 @@ namespace LabScore.io.Server.Controllers
         public async Task<IActionResult> CriarConjunto([FromBody] SimuladoConjuntoCreateDto dto)
         {
             if (dto?.QuestoesIds == null || dto.QuestoesIds.Count == 0)
-                if (dto?.QuestoesIds == null || dto.QuestoesIds.Count == 0)
-                    return BadRequest(new { mensagem = "Informe ao menos um ID de questão." });
+                return BadRequest(new { mensagem = "Informe ao menos um ID de questão." });
 
             var ids = dto.QuestoesIds.Distinct().ToList();
 
-            var questoes = (await Task.WhenAll(ids.Select(id => _service.RecuperarPorIdAsync(id))))
-                .Where(q => q is not null)
-                .ToList();
+            var questoes = new List<Questao>();
+
+            // Busca sequencial para evitar acesso concorrente ao mesmo DbContext
+            foreach (var id in ids)
+            {
+                var q = await _service.RecuperarPorIdAsync(id);
+                if (q is not null)
+                    questoes.Add(q);
+            }
 
             if (questoes.Count == 0)
                 return NotFound(new { mensagem = "Nenhuma questão encontrada para os IDs informados." });
