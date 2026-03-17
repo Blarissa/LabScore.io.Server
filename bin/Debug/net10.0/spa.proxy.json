@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:5241",
 "RedirectUrl": "",
 "LaunchCommand": "npm run dev",
-"WorkingDirectory": "C:\\Users\\laris\\source\\repos\\LabScore.io.Server\\..\\labscore.io.client",
+"WorkingDirectory": "C:\\Users\\laris\\source\\repos\\Blarissa\\LabScore.io.Server\\..\\labscore.io.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

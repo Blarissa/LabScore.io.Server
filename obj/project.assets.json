@@ -2943,11 +2943,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\laris\\source\\repos\\LabScore.io.Server\\LabScore.io.Server.csproj",
+      "projectUniqueName": "C:\\Users\\laris\\source\\repos\\Blarissa\\LabScore.io.Server\\LabScore.io.Server.csproj",
       "projectName": "LabScore.io.Server",
-      "projectPath": "C:\\Users\\laris\\source\\repos\\LabScore.io.Server\\LabScore.io.Server.csproj",
+      "projectPath": "C:\\Users\\laris\\source\\repos\\Blarissa\\LabScore.io.Server\\LabScore.io.Server.csproj",
       "packagesPath": "C:\\Users\\laris\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\laris\\source\\repos\\LabScore.io.Server\\obj\\",
+      "outputPath": "C:\\Users\\laris\\source\\repos\\Blarissa\\LabScore.io.Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3044,7 +3044,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200-preview.0.26103.119/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

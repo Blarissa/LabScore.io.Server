@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jjtH7zyCSjg=",
+  "dgSpecHash": "QV0JvO/9vTk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\laris\\source\\repos\\LabScore.io.Server\\LabScore.io.Server.csproj",
+  "projectFilePath": "C:\\Users\\laris\\source\\repos\\Blarissa\\LabScore.io.Server\\LabScore.io.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\laris\\.nuget\\packages\\automapper\\16.1.1\\automapper.16.1.1.nupkg.sha512",
     "C:\\Users\\laris\\.nuget\\packages\\efcore.namingconventions\\10.0.1\\efcore.namingconventions.10.0.1.nupkg.sha512",
