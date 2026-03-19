@@ -7,9 +7,9 @@
         public Guid QuestaoId { get; set; }
         public Guid AlternativaEscolhidaId { get; set; }
         public bool EhCorreta { get; set; }
-        public virtual Alternativa AlternativaEscolhida { get; set; }
-        public virtual Simulado Simulado { get; set; }
-        public virtual Questao Questao { get; set; }
+        public required virtual Alternativa AlternativaEscolhida { get; set; }
+        public required virtual Simulado Simulado { get; set; }
+        public required virtual Questao Questao { get; set; }
 
     }
 }

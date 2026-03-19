@@ -54,7 +54,7 @@
             <response code="400">Lista de questões inválida</response>
             <response code="404">Uma ou mais questões não encontradas</response>
         </member>
-        <member name="M:LabScore.io.Server.Controllers.SimuladoController.Create(LabScore.io.Server.Data.DTOs.Simulado.SimuladoCreateDto)">
+        <member name="M:LabScore.io.Server.Controllers.SimuladoController.Create(LabScore.io.Server.Data.DTOs.Simulado.ResponderSimuladoCreateDto)">
             <summary>
             Processa um simulado e retorna a nota final
             </summary>
@@ -79,7 +79,7 @@
             Lista o histórico de simulados (sem necessidade de login por enquanto)
             </summary>
         </member>
-        <member name="M:LabScore.io.Server.Controllers.SimuladoController.Responder(LabScore.io.Server.Data.DTOs.Simulado.SimuladoCreateDto)">
+        <member name="M:LabScore.io.Server.Controllers.SimuladoController.Responder(LabScore.io.Server.Data.DTOs.Simulado.ResponderSimuladoCreateDto)">
             <summary>
             Responde um simulado e retorna o resultado final.
             </summary>

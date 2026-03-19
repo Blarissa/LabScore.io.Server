@@ -17,8 +17,9 @@ namespace LabScore.io.Server.Validacao
             RuleFor(q => q.Alternativas)
                 .Must(a => a.Count >= 2).WithMessage("A questão deve ter pelo menos 2 alternativas.");
 
-            RuleFor(q => q.AlternativaCorretaId)
-                .NotEmpty().WithMessage("Você deve indicar qual é a alternativa correta.");
+            RuleFor(q => q.Alternativas)
+                .Must(a => a.Count(x => x.EhCorreta) == 1)
+                .WithMessage("A questão deve ter exatamente uma alternativa correta.");
         }
     }
 }

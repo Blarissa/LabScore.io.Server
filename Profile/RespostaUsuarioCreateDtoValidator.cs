@@ -15,7 +15,7 @@ namespace LabScore.io.Server.Profile
                 .NotEmpty().WithMessage("O ID da questão é obrigatório.");
 
             RuleFor(x => x.AlternativaEscolhidaId)
-                .GreaterThanOrEqualTo(0).WithMessage("O ID da alternativa deve ser válido.");
+                .NotEmpty().WithMessage("O ID da alternativa é obrigatório.");
         }
     }
 }

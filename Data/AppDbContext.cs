@@ -25,14 +25,25 @@ namespace LabScore.io.Server.Data
             modelBuilder.Entity<RespostaUsuario>().HasKey(ru => ru.Id);
 
             modelBuilder.Entity<Alternativa>()
-                .HasOne<Questao>()
+                .HasOne(a => a.Questao)
                 .WithMany(q => q.Alternativas)
                 .HasForeignKey(a => a.QuestaoId);
 
             modelBuilder.Entity<RespostaUsuario>()
-                .HasOne<Simulado>()
+                .HasOne(ru => ru.Simulado)
                 .WithMany(s => s.RespostasEnviadas)
                 .HasForeignKey(ru => ru.SimuladoId);
+
+            modelBuilder.Entity<RespostaUsuario>()
+                .HasOne(ru => ru.Questao)
+                .WithMany()
+                .HasForeignKey(ru => ru.QuestaoId);
+
+            modelBuilder.Entity<RespostaUsuario>()
+                .HasOne(ru => ru.AlternativaEscolhida)
+                .WithMany()
+                .HasForeignKey(ru => ru.AlternativaEscolhidaId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

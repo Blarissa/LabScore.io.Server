@@ -134,4 +134,3 @@ C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\obj\Debug\net10.0\LabSco
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\obj\Debug\net10.0\LabScore.io.Server.pdb
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\obj\Debug\net10.0\LabScore.io.Server.genruntimeconfig.cache
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\obj\Debug\net10.0\ref\LabScore.io.Server.dll
-C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
