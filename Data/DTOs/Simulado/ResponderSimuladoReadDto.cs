@@ -2,8 +2,7 @@
 
 namespace LabScore.io.Server.Data.DTOs.Simulado
 {
-    // O que o React recebe de volta (O Veredito)
-    public class SimuladoResultDto
+    public class ResponderSimuladoReadDto
     {
         public Guid Id { get; set; }
         public DateTime DataRealizacao { get; set; }
