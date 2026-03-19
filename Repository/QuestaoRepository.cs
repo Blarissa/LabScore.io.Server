@@ -48,5 +48,13 @@ namespace LabScore.io.Server.Repository
 
             return lista;
         }
+
+        public async Task<Alternativa> ObterAlternativaCorretaAsync(Guid questaoId)
+        {
+            return await _context.Alternativas
+                .FirstOrDefaultAsync(a => a.QuestaoId == questaoId && a.EhCorreta)
+                ?? throw new KeyNotFoundException(
+                    $"Questão {questaoId} não possui alternativa correta configurada.");
+        }
     }
 }

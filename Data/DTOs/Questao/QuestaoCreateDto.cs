@@ -1,4 +1,6 @@
-﻿namespace LabScore.io.Server.Data.DTOs.Questao
+﻿using LabScore.io.Server.Data.DTOs.Alternativa;
+
+namespace LabScore.io.Server.Data.DTOs.Questao
 {
     public class QuestaoCreateDto
     {
@@ -7,10 +9,5 @@
         public required List<AlternativaCreateDto> Alternativas { get; set; }
         public required int AlternativaCorretaId { get; set; }
         
-    }
-
-    public class AlternativaCreateDto
-    {
-        public required string Texto { get; set; }
     }
 }

@@ -8,5 +8,6 @@ namespace LabScore.io.Server.Repository
 {
     public interface IRepositoryQuestao : IRepository<Questao>{
         Task<IEnumerable<Questao>> CadastrarEmLoteAsync(IEnumerable<Questao> questoes);
+        Task<Alternativa> ObterAlternativaCorretaAsync(Guid questaoId);
     }
 }

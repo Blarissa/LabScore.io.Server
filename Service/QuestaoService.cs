@@ -61,14 +61,12 @@ namespace LabScore.io.Server.Service
             if (questao.Alternativas is null)
                 return;
 
-            var numero = 0;
             foreach (var alternativa in questao.Alternativas)
             {
                 if (alternativa.Id == Guid.Empty)
                     alternativa.Id = Guid.NewGuid();
 
                 alternativa.QuestaoId = questao.Id;
-                alternativa.Numero = numero++;
             }
         }
     }
