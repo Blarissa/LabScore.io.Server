@@ -87,15 +87,8 @@ app.UseSwagger();
 app.UseSwaggerUI(options =>
     options.SwaggerEndpoint("/swagger/v1/swagger.json", "LabScore API"));
 
-
-app.UseDefaultFiles();
-app.MapStaticAssets();
-
-
 app.UseAuthorization();
 
 app.MapControllers();
-
-app.MapFallbackToFile("/index.html");
 
 app.Run();

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QV0JvO/9vTk=",
+  "dgSpecHash": "NuldjSI4Mqk=",
   "success": true,
   "projectFilePath": "C:\\Users\\laris\\source\\repos\\Blarissa\\LabScore.io.Server\\LabScore.io.Server.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,6 @@
     "C:\\Users\\laris\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.1.1\\fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",
     "C:\\Users\\laris\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\laris\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.5\\microsoft.aspnetcore.openapi.10.0.5.nupkg.sha512",
-    "C:\\Users\\laris\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\10.0.5\\microsoft.aspnetcore.spaproxy.10.0.5.nupkg.sha512",
     "C:\\Users\\laris\\.nuget\\packages\\microsoft.build.framework\\18.0.2\\microsoft.build.framework.18.0.2.nupkg.sha512",
     "C:\\Users\\laris\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.11.0\\microsoft.codeanalysis.analyzers.3.11.0.nupkg.sha512",
     "C:\\Users\\laris\\.nuget\\packages\\microsoft.codeanalysis.common\\5.0.0\\microsoft.codeanalysis.common.5.0.0.nupkg.sha512",

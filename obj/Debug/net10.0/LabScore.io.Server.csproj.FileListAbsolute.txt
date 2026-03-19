@@ -139,7 +139,6 @@ C:\Users\laris\source\repos\LabScore.io.Server\obj\Debug\net10.0\LabScore.io.Ser
 C:\Users\laris\source\repos\LabScore.io.Server\obj\Debug\net10.0\ref\LabScore.io.Server.dll
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\bin\Debug\net10.0\appsettings.Development.json
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\bin\Debug\net10.0\appsettings.json
-C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\bin\Debug\net10.0\spa.proxy.json
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\bin\Debug\net10.0\LabScore.io.Server.staticwebassets.endpoints.json
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\bin\Debug\net10.0\LabScore.io.Server.exe
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\bin\Debug\net10.0\LabScore.io.Server.deps.json
@@ -153,7 +152,6 @@ C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\bin\Debug\net10.0\Fluent
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\bin\Debug\net10.0\Humanizer.dll
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
-C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\bin\Debug\net10.0\Microsoft.AspNetCore.SpaProxy.dll
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\bin\Debug\net10.0\Microsoft.Build.Framework.dll
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -251,7 +249,6 @@ C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\bin\Debug\net10.0\tr\Mic
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\obj\Debug\net10.0\LabScore.io.Server.csproj.AssemblyReference.cache
-C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\obj\Debug\net10.0\spa.proxy.json
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\obj\Debug\net10.0\rpswa.dswa.cache.json
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\obj\Debug\net10.0\LabScore.io.Server.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\laris\source\repos\Blarissa\LabScore.io.Server\obj\Debug\net10.0\LabScore.io.Server.AssemblyInfoInputs.cache

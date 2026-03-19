@@ -29,6 +29,7 @@ namespace LabScore.io.Server.Service
                 if (questaoOriginal == null)
                     throw new EntidadeNaoEncontradaException("Questão", resposta.QuestaoId);
 
+
                 resposta.EhCorreta = questaoOriginal.AlternativaCorretaId == resposta.AlternativaEscolhidaId;
 
                 if (resposta.EhCorreta)
