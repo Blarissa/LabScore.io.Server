@@ -43,9 +43,8 @@ namespace LabScore.io.Server.Service
             var lista = questoes.ToList();
 
             foreach (var questao in lista)
-            {
                 PrepararQuestao(questao);
-            }
+            
 
             var cadastradas = await _repository.CadastrarEmLoteAsync(lista);
             await _repository.SalvarAlteracoesAsync();
@@ -61,14 +60,12 @@ namespace LabScore.io.Server.Service
             if (questao.Alternativas is null)
                 return;
 
-            var numero = 0;
             foreach (var alternativa in questao.Alternativas)
             {
                 if (alternativa.Id == Guid.Empty)
                     alternativa.Id = Guid.NewGuid();
 
                 alternativa.QuestaoId = questao.Id;
-                alternativa.Numero = numero++;
             }
         }
     }

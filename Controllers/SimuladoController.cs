@@ -15,9 +15,9 @@ namespace LabScore.io.Server.Controllers
     {
         private readonly ISimuladoService _service;
         private readonly IMapper _mapper;
-        private readonly IValidator<SimuladoCreateDto> _validator;
+        private readonly IValidator<ResponderSimuladoCreateDto> _validator;
 
-        public SimuladoController(ISimuladoService service, IMapper mapper, IValidator<SimuladoCreateDto> validator)
+        public SimuladoController(ISimuladoService service, IMapper mapper, IValidator<ResponderSimuladoCreateDto> validator)
         {
             _service = service;
             _mapper = mapper;
@@ -35,10 +35,10 @@ namespace LabScore.io.Server.Controllers
         /// <response code="400">Dados inválidos ou simulado vazio</response>
         /// <response code="500">Erro interno do servidor</response>
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(SimuladoResultDto))]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(ResponderSimuladoReadDto))]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Create([FromBody] SimuladoCreateDto simuladoDto)
+        public async Task<IActionResult> Create([FromBody] ResponderSimuladoCreateDto simuladoDto)
         {
             var validationResult = await _validator.ValidateAsync(simuladoDto);
             if (!validationResult.IsValid)
@@ -46,7 +46,7 @@ namespace LabScore.io.Server.Controllers
 
             var simuladoEntity = _mapper.Map<Simulado>(simuladoDto);
             var resultado = await _service.ProcessarSimuladoAsync(simuladoEntity);
-            var simuladoRead = _mapper.Map<SimuladoResultDto>(resultado);
+            var simuladoRead = _mapper.Map<ResponderSimuladoReadDto>(resultado);
 
             return CreatedAtAction(nameof(Details), new { id = resultado.Id }, simuladoRead);
         }
@@ -58,34 +58,34 @@ namespace LabScore.io.Server.Controllers
         /// <response code="200">Detalhes do simulado encontrados</response>
         /// <response code="404">Simulado não encontrado</response>
         [HttpGet("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(SimuladoResultDto))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ResponderSimuladoReadDto))]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Details(Guid id)
         {
             var simulado = await _service.ObterPorIdAsync(id);
 
-            return Ok(_mapper.Map<SimuladoResultDto>(simulado));
+            return Ok(_mapper.Map<ResponderSimuladoReadDto>(simulado));
         }
 
         /// <summary>
         /// Lista o histórico de simulados (sem necessidade de login por enquanto)
         /// </summary>
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<SimuladoResultDto>))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<ResponderSimuladoReadDto>))]
         public async Task<IActionResult> All()
         {
             var lista = await _service.ListarTodosAsync();
-            return Ok(_mapper.Map<List<SimuladoResultDto>>(lista));
+            return Ok(_mapper.Map<List<ResponderSimuladoReadDto>>(lista));
         }
 
         /// <summary>
         /// Responde um simulado e retorna o resultado final.
         /// </summary>
         [HttpPost("responder")]
-        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(SimuladoResultDto))]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(ResponderSimuladoReadDto))]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public Task<IActionResult> Responder([FromBody] SimuladoCreateDto simuladoDto)
+        public Task<IActionResult> Responder([FromBody] ResponderSimuladoCreateDto simuladoDto)
             => Create(simuladoDto);
     }
 }

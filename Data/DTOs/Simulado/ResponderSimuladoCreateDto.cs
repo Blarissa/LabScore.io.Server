@@ -2,7 +2,7 @@
 
 namespace LabScore.io.Server.Data.DTOs.Simulado
 {
-    public class SimuladoCreateDto
+    public class ResponderSimuladoCreateDto
     {
         public List<RespostaUsuarioCreateDto> RespostasEnviadas { get; set; } = new();
     }

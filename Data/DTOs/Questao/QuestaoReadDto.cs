@@ -12,5 +12,6 @@
     {
         public Guid Id { get; set; }
         public required string Texto { get; set; }
+        public bool EhCorreta { get; set; }
     }
 }

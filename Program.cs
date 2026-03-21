@@ -15,8 +15,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
     ?? throw new InvalidOperationException("Connection string 'DefaultConnection' não encontrada.");
 
 connectionString = connectionString
-    .Replace("{DB_USER}", Environment.GetEnvironmentVariable("DB_USER_POSTGRES") ?? throw new InvalidOperationException("Variável de ambiente DB_USER_POSTGRES não definida."))
-    .Replace("{DB_PASS}", Environment.GetEnvironmentVariable("DB_PASS_POSTGRES") ?? throw new InvalidOperationException("Variável de ambiente DB_PASS_POSTGRES não definida."));
+    .Replace("{DB_PASS}", Environment.GetEnvironmentVariable("DB_PASS_POSTGRES") 
+        ?? throw new InvalidOperationException("Variável de ambiente DB_PASS_POSTGRES não definida."));
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(connectionString).UseSnakeCaseNamingConvention());
@@ -87,15 +87,8 @@ app.UseSwagger();
 app.UseSwaggerUI(options =>
     options.SwaggerEndpoint("/swagger/v1/swagger.json", "LabScore API"));
 
-
-app.UseDefaultFiles();
-app.MapStaticAssets();
-
-
 app.UseAuthorization();
 
 app.MapControllers();
-
-app.MapFallbackToFile("/index.html");
 
 app.Run();

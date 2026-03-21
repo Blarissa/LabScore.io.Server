@@ -7,7 +7,7 @@ using LabScore.io.Server.Data.DTOs.Simulado;
 
 namespace LabScore.io.Server.Profile
 {
-    public class SimuladoCreateDtoValidator : AbstractValidator<SimuladoCreateDto>
+    public class SimuladoCreateDtoValidator : AbstractValidator<ResponderSimuladoCreateDto>
     {
         public SimuladoCreateDtoValidator()
         {

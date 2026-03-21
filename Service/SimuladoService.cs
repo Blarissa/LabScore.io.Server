@@ -9,7 +9,10 @@ namespace LabScore.io.Server.Service
         private readonly IRepository<Simulado> _simuladoRepository;
         private readonly IRepositoryQuestao _questaoRepository;
 
-        public SimuladoService(IRepository<Simulado> simuladoRepository, IRepositoryQuestao questaoRepository)
+        public SimuladoService(
+            IRepository<Simulado> simuladoRepository,
+            IRepositoryQuestao questaoRepository
+            )
         {
             _simuladoRepository = simuladoRepository;
             _questaoRepository = questaoRepository;
@@ -25,11 +28,16 @@ namespace LabScore.io.Server.Service
             foreach (var resposta in simulado.RespostasEnviadas)
             {
                 var questaoOriginal = await _questaoRepository.ObterPorIdAsync(resposta.QuestaoId);
+                resposta.Questao = questaoOriginal;
 
-                if (questaoOriginal == null)
-                    throw new EntidadeNaoEncontradaException("Questão", resposta.QuestaoId);
+                var alternativaEscolhida = questaoOriginal.Alternativas
+                    .FirstOrDefault(a => a.Id == resposta.AlternativaEscolhidaId);
 
-                resposta.EhCorreta = questaoOriginal.AlternativaCorretaId == resposta.AlternativaEscolhidaId;
+                if (alternativaEscolhida == null)
+                    throw new EntidadeNaoEncontradaException("Alternativa escolhida", resposta.AlternativaEscolhidaId);
+
+                resposta.AlternativaEscolhida = alternativaEscolhida;
+                resposta.EhCorreta = alternativaEscolhida.EhCorreta;
 
                 if (resposta.EhCorreta)
                     acertos++;

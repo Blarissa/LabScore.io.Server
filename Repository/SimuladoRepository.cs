@@ -22,6 +22,10 @@ namespace LabScore.io.Server.Repository
         {
             return await _context.Simulados
                 .Include(s => s.RespostasEnviadas)
+                    .ThenInclude(r => r.Simulado)
+                .Include(s => s.RespostasEnviadas)
+                    .ThenInclude(r => r.Questao)
+                        .ThenInclude(q => q.Alternativas)
                 .FirstOrDefaultAsync(s => s.Id == id) ??
                 throw new KeyNotFoundException($"Simulado com ID {id} não encontrado");
         }

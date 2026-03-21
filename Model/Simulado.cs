@@ -6,6 +6,6 @@
         public Guid UsuarioId { get; set; }
         public DateTime DataRealizacao { get; set; } = DateTime.Now;
         public double PontuacaoFinal { get; set; }
-        public List<RespostaUsuario> RespostasEnviadas { get; set; } = new();
+        public virtual List<RespostaUsuario> RespostasEnviadas { get; set; } = new();
     }
 }
