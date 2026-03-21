@@ -13,8 +13,7 @@ namespace LabScore.io.Server.Profile
                 .ForMember(dest => dest.Alternativas,
                     opt => opt.MapFrom(src => src.Alternativas));
 
-            CreateMap<AlternativaCreateDto, Alternativa>()
-                .ForMember(dest => dest.EhCorreta, opt => opt.Ignore());
+            CreateMap<AlternativaCreateDto, Alternativa>();
 
             CreateMap<Questao, QuestaoReadDto>();
 
