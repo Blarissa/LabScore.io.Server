@@ -43,9 +43,8 @@ namespace LabScore.io.Server.Service
             var lista = questoes.ToList();
 
             foreach (var questao in lista)
-            {
                 PrepararQuestao(questao);
-            }
+            
 
             var cadastradas = await _repository.CadastrarEmLoteAsync(lista);
             await _repository.SalvarAlteracoesAsync();
