@@ -15,8 +15,6 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
     ?? throw new InvalidOperationException("Connection string 'DefaultConnection' não encontrada.");
 
 connectionString = connectionString
-    .Replace("{DB_USER}", Environment.GetEnvironmentVariable("DB_USER_POSTGRES") 
-        ?? throw new InvalidOperationException("Variável de ambiente DB_USER_POSTGRES não definida."))
     .Replace("{DB_PASS}", Environment.GetEnvironmentVariable("DB_PASS_POSTGRES") 
         ?? throw new InvalidOperationException("Variável de ambiente DB_PASS_POSTGRES não definida."));
 
