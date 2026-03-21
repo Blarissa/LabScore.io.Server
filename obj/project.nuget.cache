@@ -46,15 +46,5 @@
     "C:\\Users\\laris\\.nuget\\packages\\system.composition.runtime\\9.0.0\\system.composition.runtime.9.0.0.nupkg.sha512",
     "C:\\Users\\laris\\.nuget\\packages\\system.composition.typedparts\\9.0.0\\system.composition.typedparts.9.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\laris\\source\\repos\\LabScore.io.Server\\obj\\project.nuget.cache: '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
-      "projectPath": "C:\\Users\\laris\\source\\repos\\LabScore.io.Server\\LabScore.io.Server.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\laris\\source\\repos\\LabScore.io.Server\\LabScore.io.Server.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }
